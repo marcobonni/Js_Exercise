@@ -1,6 +1,6 @@
-function nicknameMap(persons) {
+function nicknameMap(Array) {
   let nicknames = [];
-  for (const object of persons) {
+  for (const object of Array) {
     nicknames.push(object.name, object.age);
   }
   return nicknames;
