@@ -3,6 +3,6 @@ function printName(name) {
     function inner() {
         console.log(helloName);
     }
-    setTimeout(inner, 3000);
+    setTimeout(inner, 1000);
 }
 printName("John");
