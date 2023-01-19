@@ -1,14 +1,9 @@
 function calculateAverageAge(Array) {
-  let SumAge = 0;
-  let counter = 0;
-  for (const Element of Array) {
-    SumAge = SumAge + Element.age;
-    counter++
-  }
-  let averageSumAge = SumAge / counter;
-  return averageSumAge;
+  const sum = Array.reduce((accumulator, object) => {
+    return accumulator + object.age;
+  }, 0);
+  console.log(Math.round(sum/persons.length))
 }
-
 const persons = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
