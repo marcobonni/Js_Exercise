@@ -59,10 +59,14 @@ const notes = [
 //     }
 //   }
 // }
+console.log(notes.todos)
+// uncompletedNotes(notes)
 function uncompletedNotes(array) {
-
-        }
-      }
+  for (const key in object) {
+    if (Object.id.call(object, key)) {
+      const element = object[key];
+      console.log(element)
     }
   }
-uncompletedNotes(notes);
+}
+uncompletedNotes(notes)
