@@ -48,21 +48,13 @@ const notes = [
   },
 ];
 
-// function uncompletedNotes(array) {
-//   for (let i = 0; i < array.length; i++) {
-//     let roadmap = array[i]
-//     for (let j = 0; j < roadmap.todos.length; j++) {
-//       let todo = roadmap.todos[j]
-//       if (!todo.done) {
-//         console.log(todo)
-//       }
-//     }
-//   }
-// }
 function uncompletedNotes(array) {
-
-        }
+  array.forEach (Element => {
+    Element.todos.filter(todo => {
+      if (todo.done == false){
+        console.log(todo);
       }
-    }
-  }
+    })
+  } ) 
+}
 uncompletedNotes(notes);

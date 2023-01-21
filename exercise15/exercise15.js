@@ -1,12 +1,5 @@
 function sortPeopleByAge(array) {
-  for (i = 0; i < array.length; i++) {
-    let roadmap = array[i];
-    for (j = 0; j < array.length - i - 1; j++) {
-      if (array[j].age > array[j + 1].age) {
-        console.log(array[j])
-      }
-    }
-  }
+  return array.sort((a, b) => a.age - b.age);
 }
 
 
@@ -23,5 +16,4 @@ const people = [
   { name: 'Alice', age: 28 }
 ];
 sortPeopleByAge(people);
-// const sortingByAge = sortPeopleByAge(people)
-// console.log(sortingByAge)
+console.log(people);
