@@ -34,6 +34,5 @@ person._firstName = 'Maria';
 person._lastName = 'Verdi';
 person._age = 20;
 console.log(person.fullName);
-console.log(person._age);
-person._age = 22;
-console.log(person._age);
+
+
