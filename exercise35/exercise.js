@@ -1,8 +1,11 @@
 function repeat(callback, string) {
-    setTimeout(callback, 1000);
+    let sec = 1000;
+    setTimeout(callback, sec);
     setTimeout(() => {
         console.log(string);
-    }, 2000);
+    }, sec + 2000);
 }
 
 repeat(() => console.log("Hello"), "Marco");
+//devo usare un arrow function perché devo metterlo come parametro della funzione
+
