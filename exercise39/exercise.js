@@ -1,20 +1,25 @@
 const isLogged = true;
-let p = new Promise((resolve, reject) => {
-    if (isLogged == true) {
-        let number = Math.floor(Math.random() * 10);
-        resolve(number)
-    } else {
-        reject("error")
-    }
-});
+const john = {
+    name : "John",
+    age : 24
+}
+const Random_number = Math.random()
+const promise = new Promise((resolve, reject) => {
+    isLogged ? 
+        resolve(Math.random()) : reject("Not logged")
+})
 
-p.then((number) => {
-    if (number > 5) {
-        let obj = {name: "John", age: 24}
-        console.log(obj);
-        return obj;
-    } else {
-            console.log("error")
+function check_Numb(numb){
+    return new Promise((resolve, reject) => {
+        if (numb > 0.5){
+            resolve(john)
+        } else{
+            reject("error")
         }
-    }
-)
+    })
+}
+
+promise
+    .then(check_Numb(Random_number))
+    .then((val) => console.log(val))
+    .catch((error) => console.log(error))
