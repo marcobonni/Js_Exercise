@@ -3,10 +3,9 @@ const john = {
     name : "John",
     age : 24
 }
-const Random_number = Math.random()
 const promise = new Promise((resolve, reject) => {
     isLogged ? 
-        resolve(Math.random()) : reject("Not logged")
+        resolve(Math.random()) : reject(new Error("Not logged"))
 })
 
 function check_Numb(numb){
@@ -14,7 +13,7 @@ function check_Numb(numb){
         if (numb > 0.5){
             resolve(john)
         } else{
-            reject("error")
+            reject(new Error("the number is smaller than 0.5"))
         }
     })
 }
@@ -23,3 +22,4 @@ promise
     .then(check_Numb(Random_number))
     .then((val) => console.log(val))
     .catch((error) => console.log(error))
+    .finally(() => console.log("END"))
